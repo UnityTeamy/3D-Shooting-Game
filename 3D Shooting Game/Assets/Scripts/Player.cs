@@ -51,7 +51,7 @@ public class Player : MonoBehaviour {
         ry = Mathf.Clamp(ry, -90, 90);
         transform.rotation = Quaternion.Euler(0, rx, 0);
         Camera.main.transform.rotation = Quaternion.Euler(-ry, rx, 0);
-        //자동완성으로 이 코드가 작성됨.
+        
     }
 
     private void OnCollisionEnter(Collision collision) {
