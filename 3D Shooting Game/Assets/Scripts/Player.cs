@@ -9,11 +9,21 @@ public class Player : MonoBehaviour {
 
     float rx;
     float ry;
-    public float rotSpeed = 200;
+    // public float rotSpeed = 200;
     
     bool isGrounded;
 
     Rigidbody rigid;
+
+    // Camera
+    public Camera cam;
+    
+    [SerializeField]
+    float lookSensitivity;
+
+    [SerializeField]
+    float cameraRotateLimit;
+    float currentCameraRotationX = 0;
 
     private void Awake() {
         isGrounded = true;
@@ -22,7 +32,8 @@ public class Player : MonoBehaviour {
 
     void Update() {
         Move();
-        Rotate();
+        PlayerRotate();
+        CameraRotate();
     }
 
     void Move() {
@@ -43,15 +54,21 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void Rotate() {
-        float mx = Input.GetAxis("Mouse X");
-        float my = Input.GetAxis("Mouse Y");
-        rx += mx * rotSpeed * Time.deltaTime;
-        ry += my * rotSpeed * Time.deltaTime;
-        ry = Mathf.Clamp(ry, -90, 90);
-        transform.rotation = Quaternion.Euler(0, rx, 0);
-        Camera.main.transform.rotation = Quaternion.Euler(-ry, rx, 0);
-        
+    void PlayerRotate() {
+        // 좌우 플레이어 회전
+        float _yRotation = Input.GetAxis("Mouse X");
+        Vector3 _playerRotation = new Vector3(0f, _yRotation, 0f) * lookSensitivity;
+        rigid.MoveRotation(rigid.rotation * Quaternion.Euler(_playerRotation));
+    }
+
+    void CameraRotate() {
+        // 상하 카메라 회전
+        float _xRotation = Input.GetAxis("Mouse Y");
+        float _cameraRotationX = _xRotation * lookSensitivity;
+        currentCameraRotationX -= _cameraRotationX;
+        currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotateLimit, cameraRotateLimit);
+
+        cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0, 0); // rotate camera
     }
 
     private void OnCollisionEnter(Collision collision) {
