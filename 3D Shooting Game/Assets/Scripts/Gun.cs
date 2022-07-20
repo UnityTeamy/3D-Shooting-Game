@@ -22,9 +22,15 @@ public class Gun : MonoBehaviour
     // 총알 발사 속도
     public float fireSpeed = 10.0f;
 
+    //bullet destroy
+    public float bullet_destroytime = 2.0f;
+
     public GameObject player;
 
     public Camera myCamera;
+
+    //Reload 여러번 실행 제한
+    public bool load = false;
 
     void Start()
     {
@@ -43,7 +49,7 @@ public class Gun : MonoBehaviour
 
     void Fire() {
         currentTime += Time.deltaTime;
-        if(Input.GetMouseButton(0)) {
+        if(Input.GetMouseButton(0) && !(load)) {
             if(currentTime > fireDelay) {
                 if(bulletCount > 0) {
                     currentTime = 0;
@@ -53,19 +59,38 @@ public class Gun : MonoBehaviour
                     GameObject bullet = Instantiate(bulletPrefab, firePos.position + transform.forward, firePos.rotation);
                     // 총알 속도 설정
                     bullet.GetComponent<Rigidbody>().velocity = firePos.forward * fireSpeed;
-                    Destroy(bullet, 2f);
-                } else {
-                    Reload();
-                }
+                    Destroy(bullet, bullet_destroytime);
+                } /*else {
+                    if (Input.GetMouseButton(2))
+                        Invoke("Reload", 1f);
+                }*/
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R) && !(load))
+        {
+            load = true;
+            Invoke("Reload", 1f);
+            //Reload();
+                   
         }
     }
 
     void Reload() {
-        if(handleBulletCount <= 0) {
+        handleBulletCount += bulletCount;
+        if (handleBulletCount <= 0) {
             return;
         }
-        bulletCount = reloadBulletCount;
-        handleBulletCount--;
+        if (handleBulletCount >= reloadBulletCount)
+            {
+                bulletCount = reloadBulletCount;
+                handleBulletCount -= reloadBulletCount;
+            }
+            else
+            {
+                bulletCount = handleBulletCount;
+                handleBulletCount = 0;
+            }
+
+        load = false;
     }
 }
