@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class Gun : MonoBehaviour
     public int reloadBulletCount = 30;
     public int bulletCount = 30;
     public int handleBulletCount = 100;
+    public TextMeshProUGUI bullet_text;
 
     // 발사 딜레이
     public float fireDelay = 0.5f;
@@ -40,6 +43,7 @@ public class Gun : MonoBehaviour
     void Update() {
         // RotateX();
         Fire();
+        bullet_text.text = bulletCount.ToString() + "/" + reloadBulletCount.ToString();
     }
 
     void RotateX() {
