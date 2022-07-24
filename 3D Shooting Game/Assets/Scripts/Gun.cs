@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     public int bulletCount = 30;
     public int handleBulletCount = 100;
     public TextMeshProUGUI bullet_text;
+    //https://cholol.tistory.com/445
 
     // 발사 딜레이
     public float fireDelay = 0.5f;
