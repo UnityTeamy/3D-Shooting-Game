@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public GameObject to_follow;
-    public float x, y, z;
-    public RectTransform rect;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rect = gameObject.GetComponent<RectTransform>();
-    }
+    // this script is for health bar to follow target
+    public Transform target;
 
-    // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        rect.position = new Vector3(to_follow.transform.position.x + x, y, to_follow.transform.position.z + z);
-=======
-        rect.position = new Vector3(x, y, z);
->>>>>>> e1cc1bb17d659ced5b17b37d190190af543beab0
-        
+        transform.position = target.position + new Vector3(0, 1.2f, 0);
     }
+
+    // public GameObject to_follow;
+    // public float x, y, z;
+    // public RectTransform rect;
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+    //     rect = gameObject.GetComponent<RectTransform>();
+    // }
+
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //     // make health bar follow to_follow
+    //     // x = to_follow.transform.position.x;
+    //     // y = to_follow.transform.position.y;
+    //     // z = to_follow.transform.position.z;
+    //     // rect.position = new Vector3(x, y, z);
+    //     rect.position = new Vector3(to_follow.transform.position.x, to_follow.transform.position.y + y, to_follow.transform.position.z);
+    //     Debug.Log(to_follow.transform.position);
+    //     Debug.Log(rect.position);
+    // }
 }
