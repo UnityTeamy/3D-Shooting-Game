@@ -17,7 +17,8 @@ public class Player : MonoBehaviour {
 
     // Camera
     public Camera cam;
-    
+    public GameObject camInHere;
+
     [SerializeField]
     float lookSensitivity;
 
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour {
         currentCameraRotationX -= _cameraRotationX;
         currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotateLimit, cameraRotateLimit);
 
-        cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0, 0); // rotate camera
+        camInHere.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0, 0); // rotate camera
     }
 
     private void OnCollisionEnter(Collision collision) {
