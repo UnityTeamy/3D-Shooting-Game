@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public int Enemy_health = 100;
     public int damage = 10;
     public Image imgBar;
+    public int enemycount = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +42,10 @@ public class Enemy : MonoBehaviour
         imgBar.fillAmount = Enemy_health / 100.0f;
         //imgBar.transform.localScale = new Vector3(Enemy_health / 100.0f, 1, 1);
         //imgBar.transform.position = new Vector3(0.5f, 0, - imgBar.transform.position.x * Enemy_health / 100.0f);
+    }
+
+    public void Respawn()
+    {
+
     }
 }

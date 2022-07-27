@@ -44,7 +44,7 @@ public class Gun : MonoBehaviour
     void Update() {
         // RotateX();
         Fire();
-        bullet_text.text = bulletCount.ToString() + "/" + reloadBulletCount.ToString();
+        bullet_text.text = bulletCount.ToString() + " / " + reloadBulletCount.ToString();
     }
 
     void RotateX() {
