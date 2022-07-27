@@ -10,10 +10,18 @@ public class Enemy : MonoBehaviour
     public int Enemy_health = 100;
     public int damage = 10;
     public Image imgBar;
-    public int enemycount = 1;
+
+    //적 개수 관련
+    public GameObject Enemyobj;
+    public int enemycount;
+    public int Maxenemy;
+    public float retime;
+    public Transform[] point;
+
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("Respawn", retime, retime);
         nav = GetComponent <NavMeshAgent>();
     }
 
@@ -46,6 +54,11 @@ public class Enemy : MonoBehaviour
 
     public void Respawn()
     {
+        if (enemycount >= Maxenemy)
+            return;
 
+        enemycount++;
+        int i = Random.Range(0, point.Length);
+        Instantiate(Enemyobj, point[i]);
     }
 }
