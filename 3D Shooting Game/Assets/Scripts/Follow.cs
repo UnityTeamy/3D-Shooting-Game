@@ -12,6 +12,7 @@ public class Follow : MonoBehaviour
         transform.position = target.position + new Vector3(0, 1.2f, 0);
     }
 
+    /*
     // public GameObject to_follow;
     // public float x, y, z;
     // public RectTransform rect;
@@ -33,4 +34,5 @@ public class Follow : MonoBehaviour
     //     Debug.Log(to_follow.transform.position);
     //     Debug.Log(rect.position);
     // }
+    */
 }
