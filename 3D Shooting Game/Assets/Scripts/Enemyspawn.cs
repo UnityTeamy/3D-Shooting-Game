@@ -10,6 +10,7 @@ public class Enemyspawn : MonoBehaviour
     public int Maxenemy;
     public float retime;
     public Transform[] point;
+    public Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,9 @@ public class Enemyspawn : MonoBehaviour
 
         enemycount++;
         int i = Random.Range(0, point.Length);
-        Instantiate(Enemyobj, point[i]);
+        GameObject enemy = Instantiate(Enemyobj).gameObject;
+        enemy.transform.position = point[i].position;
+        enemy.GetComponent<Enemy>().player = player.gameObject.transform;
+        enemy.GetComponent<Enemy>().enemyspawn = this;
     }
 }
