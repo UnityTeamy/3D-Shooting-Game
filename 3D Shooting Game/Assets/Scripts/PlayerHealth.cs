@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
+    //HP
+    public TextMeshProUGUI HP;
+
     public int Player_health = 100;
     public int damage = 10;
 
@@ -32,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         bDamage = false;
+        HP.text = "HP : " + Player_health.ToString() + " / 100";
     }
     private void OnTriggerEnter(Collider other)
     {
