@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 917669514706845593}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -542,6 +542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3963c099028154cb3f26050d959926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gun: {fileID: 186716860383747943}
+  player: {fileID: 0}
   fireDelay: 1
   bulletPrefab: {fileID: 1170136823076620574, guid: cdc6a5e5fcf2fc84d9fd162470f82c9b, type: 3}
   firePos: {fileID: 8843593654955520299}

@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Gun : MonoBehaviour
-{ // 발사 딜레이
+{
+    //총 오브젝트
+    public Transform gun;
+
+    //플레이어 오브젝트
+    public Transform player;
+
+    // 발사 딜레이
     public float fireDelay = 0.5f;
     float currentTime;
 
@@ -28,6 +35,7 @@ public class Enemy_Gun : MonoBehaviour
     void Update()
     {
         Fire();
+        gun.transform.LookAt(player.transform.position);
     }
     void Fire()
     {

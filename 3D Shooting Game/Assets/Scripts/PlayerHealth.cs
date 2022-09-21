@@ -24,11 +24,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if(bDamage)
         {
-            imgDamage.color = new Color(1, 0, 0, 1);
+            imgDamage.color = new Color(1, 0, 0, 0.5f);
         }
         else
         {
-            imgDamage.color = Color.Lerp(imgDamage.color, Color.clear, 200 * Time.deltaTime);
+            imgDamage.color = Color.Lerp(imgDamage.color, Color.clear, 2 * Time.deltaTime);
         }
 
         bDamage = false;

@@ -35,5 +35,6 @@ public class Enemyspawn : MonoBehaviour
         enemy.transform.position = point[i].position;
         enemy.GetComponent<Enemy>().player = player.gameObject.transform;
         enemy.GetComponent<Enemy>().enemyspawn = this;
+        enemy.GetComponent<Enemy_Gun>().player = player.gameObject.transform;
     }
 }

@@ -61,6 +61,7 @@ public class Gun : MonoBehaviour
                     bulletCount--;
 
                     // 총알 생성
+                    //GameObject bullet = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
                     GameObject bullet = Instantiate(bulletPrefab, firePos.position + transform.forward, firePos.rotation);
                     // 총알 속도 설정
                     bullet.GetComponent<Rigidbody>().velocity = firePos.forward * fireSpeed;
