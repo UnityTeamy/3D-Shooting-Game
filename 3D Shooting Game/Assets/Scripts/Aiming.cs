@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Aiming : MonoBehaviour
 {
+    //조준 이미지
+    public GameObject Frame;
+
     public float FieldOfView = 60.0f;
     public float NormalFov = 60.0f;
     public float AimingFov = 10.0f;
@@ -25,6 +28,7 @@ public class Aiming : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             //Aiming
+            Frame.SetActive(true);
             if (FieldOfView <= AimingFov)
             {
                 FieldOfView = AimingFov;
@@ -36,6 +40,8 @@ public class Aiming : MonoBehaviour
         }
         else
         {
+            //not Aiming
+            Frame.SetActive(false);
             if (FieldOfView >= NormalFov)
             {
                 FieldOfView = NormalFov;

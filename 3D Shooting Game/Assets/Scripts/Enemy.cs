@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+
 public class Enemy : MonoBehaviour
 {
     public Transform player;
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int damage = 10;
     public Image imgBar;
     public Enemyspawn enemyspawn;
+    public Enemy_Gun gun;
 
     void Start() 
     {
@@ -45,7 +47,9 @@ public class Enemy : MonoBehaviour
             // nav.SetDestination(transform.position);
             nav.enabled = false;
             Destroy(gameObject, 2);
+            gun.shoot = false;
             enemyspawn.enemycount--;
+            enemyspawn.kill++;
         }
     }
 }

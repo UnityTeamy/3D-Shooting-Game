@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy_Gun : MonoBehaviour
 {
+    //ÃÑ¾Ë ¹ß»ç ¸ØÃã
+    public bool shoot;
+
     //ÃÑ ¿ÀºêÁ§Æ®
     public Transform gun;
 
@@ -28,7 +31,7 @@ public class Enemy_Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        shoot = true;
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class Enemy_Gun : MonoBehaviour
     void Fire()
     {
         currentTime += Time.deltaTime;
-        if (currentTime > fireDelay)
+        if (currentTime > fireDelay && shoot)
         {
             currentTime = 0;
 
