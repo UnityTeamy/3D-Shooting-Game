@@ -3,7 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Gun : MonoBehaviour
-{ // ¹ß»ç µô·¹ÀÌ
+{
+    //ÃÑ¾Ë ¹ß»ç ¸ØÃã
+    public bool shoot;
+
+    //ÃÑ ¿ÀºêÁ§Æ®
+    public Transform gun;
+
+    //ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®
+    public Transform player;
+
+    // ¹ß»ç µô·¹ÀÌ
     public float fireDelay = 0.5f;
     float currentTime;
 
@@ -21,18 +31,19 @@ public class Enemy_Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        shoot = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         Fire();
+        gun.transform.LookAt(player.transform.position);
     }
     void Fire()
     {
         currentTime += Time.deltaTime;
-        if (currentTime > fireDelay)
+        if (currentTime > fireDelay && shoot)
         {
             currentTime = 0;
 

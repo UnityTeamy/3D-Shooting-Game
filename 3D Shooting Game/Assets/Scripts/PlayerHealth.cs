@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
+    //HP
+    public TextMeshProUGUI HP;
+
     public int Player_health = 100;
     public int damage = 10;
 
@@ -24,14 +28,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if(bDamage)
         {
-            imgDamage.color = new Color(1, 0, 0, 1);
+            imgDamage.color = new Color(1, 0, 0, 0.5f);
         }
         else
         {
-            imgDamage.color = Color.Lerp(imgDamage.color, Color.clear, 200 * Time.deltaTime);
+            imgDamage.color = Color.Lerp(imgDamage.color, Color.clear, 2 * Time.deltaTime);
         }
 
         bDamage = false;
+        HP.text = "HP : " + Player_health.ToString() + " / 100";
     }
     private void OnTriggerEnter(Collider other)
     {

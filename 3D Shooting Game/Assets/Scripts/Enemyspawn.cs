@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemyspawn : MonoBehaviour
 {
+    //count of kill
+    public TextMeshProUGUI Kill;
+    public int kill;
+
     //적 개수 관련
     public GameObject Enemyobj;
     public int enemycount;
@@ -16,12 +21,13 @@ public class Enemyspawn : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Respawn", retime, retime);
+        kill = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Kill.text = "Kill X " + kill.ToString();
     }
 
     public void Respawn()
@@ -35,5 +41,6 @@ public class Enemyspawn : MonoBehaviour
         enemy.transform.position = point[i].position;
         enemy.GetComponent<Enemy>().player = player.gameObject.transform;
         enemy.GetComponent<Enemy>().enemyspawn = this;
+        enemy.GetComponent<Enemy_Gun>().player = player.gameObject.transform;
     }
 }
