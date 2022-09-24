@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  Enemy_health: 100
+  Enemy_health: 50
   damage: 10
   imgBar: {fileID: 186716860041106199}
   enemyspawn: {fileID: 0}
