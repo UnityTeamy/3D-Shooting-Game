@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public Transform player;
-    public GameObject grenade;
-
-    //½ò ¼ö ÀÖ´Â ¼ö·ùÅº °³¼ö
-    public int count;
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("Explode", 2);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Explode()
     {
-        
-    }
+        // í­ë°œ
 
-    private void FixedUpdate()
-    {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            grenade.transform.position = player.transform.position;
-        }
+        // ë°ë¯¸ì§€        
     }
 }
