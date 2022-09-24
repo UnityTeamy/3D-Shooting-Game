@@ -24,11 +24,15 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   controlID: 231
 =======
   controlID: 13403
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+  controlID: 27158
+>>>>>>> Stashed changes
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -108,7 +112,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -188,8 +192,12 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 13404
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+  controlID: 27159
+>>>>>>> Stashed changes
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,8 +230,12 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 13405
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+  controlID: 27160
+>>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,9 +259,14 @@ MonoBehaviour:
 =======
     width: 336
     height: 552
+<<<<<<< Updated upstream
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Stashed changes
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -293,11 +310,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       m_ExpandedIDs: 34fbffff
 =======
       m_ExpandedIDs: 846dffff02f1ffff36fbffff805a0000c2c50000
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+      m_ExpandedIDs: 34b3ffff86e9ffff88e9ffff36fbffff10670000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -445,7 +466,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -511,7 +532,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Navmesh Display
@@ -522,7 +543,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Agent Display
@@ -577,7 +598,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -597,6 +618,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
@@ -606,6 +628,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -2.0769734, y: 33.829838, z: -8.383482}
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+    m_Target: {x: -0.3993367, y: 1.2722373, z: -2.9882803}
+    speed: 2
+    m_Value: {x: -0.3993367, y: 1.2722373, z: -2.9882803}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -652,6 +679,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
@@ -662,21 +690,34 @@ MonoBehaviour:
     m_Value: 10
 =======
     m_Target: {x: -0.50700635, y: -0.022735834, z: 0.013393909, w: -0.8615469}
+=======
+    m_Target: {x: -0.47426492, y: 0.09657787, z: -0.05242182, w: -0.8735056}
+>>>>>>> Stashed changes
     speed: 2
-    m_Value: {x: -0.5070026, y: -0.022735666, z: 0.01339381, w: -0.8615405}
+    m_Value: {x: -0.47426146, y: 0.09657717, z: -0.05242144, w: -0.8734992}
   m_Size:
-    m_Target: 9.759544
+    m_Target: 54.180576
     speed: 2
+<<<<<<< Updated upstream
     m_Value: 9.759544
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+    m_Value: 54.180576
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
+<<<<<<< Updated upstream
     m_Speed: 1
     m_SpeedNormalized: 0.5
     m_SpeedMin: 0.001
+=======
+    m_Speed: 1.005
+    m_SpeedNormalized: 0.49999997
+    m_SpeedMin: 0.01
+>>>>>>> Stashed changes
     m_SpeedMax: 2
     m_EasingEnabled: 1
     m_EasingDuration: 0.4
@@ -734,7 +775,7 @@ MonoBehaviour:
   m_EditorHideFlags: 1
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -751,16 +792,29 @@ MonoBehaviour:
     y: 552
     width: 1180.8
     height: 170.79999
+<<<<<<< Updated upstream
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_ActualView: {fileID: 11}
+>>>>>>> Stashed changes
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
+<<<<<<< Updated upstream
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &10
+=======
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -807,19 +861,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Slim\Desktop\Unity Team\3D-Shooting-Game\3D Shooting
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 76870000
@@ -831,6 +886,12 @@ MonoBehaviour:
     m_LastClickedID: 25268
     m_ExpandedIDs: 0000000020620000226200002462000026620000286200002a6200002c6200002e620000306200007e62000000ca9a3bffffff7f
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+    scrollPos: {x: 0, y: 750.2}
+    m_SelectedIDs: a4630000
+    m_LastClickedID: 25508
+    m_ExpandedIDs: 00000000a6620000a8620000aa620000ac620000ae620000b0620000b2620000b4620000b66200002a6300006066000066660000686600007266000076660000886600008e6600009066000000ca9a3bffffff7f
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -858,11 +919,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_ExpandedIDs: 00000000505f0000
 =======
     m_ExpandedIDs: 0000000020620000226200002462000026620000286200002a6200002c6200002e6200003062000000ca9a3bffffff7f
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+    m_ExpandedIDs: 00000000a6620000a8620000aa620000ac620000ae620000b0620000b2620000b4620000b66200006066000066660000686600007266000076660000886600008e6600009066000000ca9a3bffffff7f
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -887,6 +952,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
@@ -898,6 +964,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000948000008ab80000
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+    m_SelectedInstanceIDs: 4eb3feff
+    m_LastClickedInstanceID: -85170
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000948000008ab800008e640000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1041,11 +1113,15 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   m_LastInspectedObjectInstanceID: -1
 =======
   m_LastInspectedObjectInstanceID: 50386
 >>>>>>> ea758c32a1a66ec1b739f25551bb12f70bba9b15
+=======
+  m_LastInspectedObjectInstanceID: -85170
+>>>>>>> Stashed changes
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
