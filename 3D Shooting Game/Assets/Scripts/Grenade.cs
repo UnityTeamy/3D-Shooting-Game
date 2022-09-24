@@ -6,7 +6,7 @@ public class Grenade : MonoBehaviour
 {
     void Start()
     {
-        Invoke("Explode", 2);
+        //Invoke("Explode", 2);
     }
 
     public void Explode()
