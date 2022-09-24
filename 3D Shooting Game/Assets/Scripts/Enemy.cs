@@ -9,15 +9,19 @@ public class Enemy : MonoBehaviour
     public Transform player;
     NavMeshAgent nav;
     public int Enemy_health = 100;
+    public int fullhealth = 100;
     public int damage = 10;
     public Image imgBar;
     public Enemyspawn enemyspawn;
     public Enemy_Gun gun;
+    Rigidbody rigid;
 
     void Start() 
     {
         nav = GetComponent<NavMeshAgent>();
         nav.SetDestination(player.position);
+        rigid = GetComponent<Rigidbody>();
+        fullhealth = Enemy_health;
     }
 
     // Update is called once per frame
@@ -30,14 +34,14 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            Damage();
+            Damage(10);
             Destroy(other.gameObject);
         }
     }
     
-    void Damage()
+    void Damage(int damagesize)
     {
-        Enemy_health -= damage;
+        Enemy_health -= damagesize;
         imgBar.fillAmount = Enemy_health / 100.0f;
         //imgBar.transform.localScale = new Vector3(Enemy_health / 100.0f, 1, 1);
         //imgBar.transform.position = new Vector3(0.5f, 0, - imgBar.transform.position.x * Enemy_health / 100.0f);
@@ -52,4 +56,23 @@ public class Enemy : MonoBehaviour
             enemyspawn.kill++;
         }
     }
+
+    public void HitByGrenade(Vector3 explosionPos)
+    {
+        Damage(fullhealth/2);
+        Vector3 reactVec = transform.position - explosionPos;
+        StartCoroutine(OnDamage(reactVec));
+    }
+
+    IEnumerator OnDamage(Vector3 reactVec)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        //gameObject.layer = 14;
+
+        reactVec = reactVec.normalized;
+        //reactVec += Vector3.up;
+        //rigid.AddForce(reactVec * 5, ForceMode.Impulse);
+    }
+
 }
