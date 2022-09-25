@@ -17,10 +17,13 @@ public class PlayerHealth : MonoBehaviour
 
     //Damage È¿°ú
     public Image imgDamage;
+
+    public Player player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = gameObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -53,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (Player_health <= 0)
         {
+            player.isDead = true;
             Debug.Log("GAME OVER");
             Time.timeScale = 0;
             //Destroy(gameObject, 2);

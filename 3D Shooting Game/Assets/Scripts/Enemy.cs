@@ -42,18 +42,22 @@ public class Enemy : MonoBehaviour
     void Damage(int damagesize)
     {
         Enemy_health -= damagesize;
-        imgBar.fillAmount = Enemy_health / 100.0f;
+        imgBar.fillAmount = (float) Enemy_health / (float) fullhealth;
+        Debug.Log(Enemy_health / fullhealth);
         //imgBar.transform.localScale = new Vector3(Enemy_health / 100.0f, 1, 1);
         //imgBar.transform.position = new Vector3(0.5f, 0, - imgBar.transform.position.x * Enemy_health / 100.0f);
 
         if(Enemy_health <= 0)
         {
+            // dead
+
             // nav.SetDestination(transform.position);
             nav.enabled = false;
-            Destroy(gameObject, 2);
             gun.shoot = false;
             enemyspawn.enemycount--;
             enemyspawn.kill++;
+            
+            Destroy(gameObject, 2);
         }
     }
 

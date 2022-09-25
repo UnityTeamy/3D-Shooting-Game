@@ -469,7 +469,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186716859719810724}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -526,7 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  Enemy_health: 50
+  Enemy_health: 100
+  fullhealth: 100
   damage: 10
   imgBar: {fileID: 186716860041106199}
   enemyspawn: {fileID: 0}
