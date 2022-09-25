@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public Enemyspawn enemyspawn;
     public Enemy_Gun gun;
     Rigidbody rigid;
+    bool dead = false;
 
     void Start() 
     {
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
         nav.SetDestination(player.position);
         rigid = GetComponent<Rigidbody>();
         fullhealth = Enemy_health;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -47,10 +49,11 @@ public class Enemy : MonoBehaviour
         //imgBar.transform.localScale = new Vector3(Enemy_health / 100.0f, 1, 1);
         //imgBar.transform.position = new Vector3(0.5f, 0, - imgBar.transform.position.x * Enemy_health / 100.0f);
 
-        if(Enemy_health <= 0)
+        if(Enemy_health <= 0 && !(dead))
         {
             // dead
 
+            dead = true;
             // nav.SetDestination(transform.position);
             nav.enabled = false;
             gun.shoot = false;
