@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
     void PlayerRotate()
     {
         // 좌우 플레이어 회전
+        // float _xRotation = Input.GetAxis("Mouse Y");
         float _yRotation = Input.GetAxis("Mouse X");
         Vector3 _playerRotation = new Vector3(0f, _yRotation, 0f) * lookSensitivity;
         rigid.MoveRotation(rigid.rotation * Quaternion.Euler(_playerRotation));
