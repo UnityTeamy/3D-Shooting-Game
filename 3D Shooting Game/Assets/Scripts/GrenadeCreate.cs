@@ -27,6 +27,7 @@ public class GrenadeCreate : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && count > 0 && instant == false)
         {
+            Debug.Log("hi");
             instant = true;
         //     Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
         //     RaycastHit rayHit;
@@ -44,6 +45,13 @@ public class GrenadeCreate : MonoBehaviour
             // }
             // instantGrenade.GetComponent<Grenade>().
             count--;
+            StartCoroutine("makeInstantTrue");
         }
+    }
+
+    IEnumerator makeInstantTrue()
+    {
+        yield return new WaitForSeconds(0.5f);
+        instant = false;
     }
 }

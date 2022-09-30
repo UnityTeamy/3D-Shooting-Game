@@ -8512,7 +8512,8 @@ MonoBehaviour:
   grenade: {fileID: 5503930540953872354, guid: a630418f35641ad4e92200241be7b3b0, type: 3}
   cameraInHere: {fileID: 946232857}
   grenadePosition: {fileID: 867460988}
-  count: 0
+  instant: 0
+  count: 10
 --- !u!1001 &1948573262
 PrefabInstance:
   m_ObjectHideFlags: 0
