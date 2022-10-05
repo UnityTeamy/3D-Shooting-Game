@@ -9,12 +9,22 @@ public class GrenadeCreate : MonoBehaviour
     public GameObject grenadePosition;
     public bool instant;
 
+    public Transform[] point;
+    public int Maxgrenade = 3;
+    
+    //생성되어 있는 수류탄 개수
+    public int grenadecount = 0;
+
+    public Player player;
+    public float retime;
+
     //쏠 수 있는 수류탄 개수
     public int count = 10;
     // Start is called before the first frame update
     void Start()
     {
         instant = false;
+        InvokeRepeating("Spinning", retime, retime);
     }
 
     // Update is called once per frame
@@ -36,6 +46,7 @@ public class GrenadeCreate : MonoBehaviour
         //         Vector3 nextVec = rayHit.point - grenadePosition.transform.position;
 
                 GameObject instantGrenade = Instantiate(grenade, grenadePosition.transform.position, transform.rotation);
+                instantGrenade.GetComponent<Grenade>().isboom = true;
                 Rigidbody rigid = instantGrenade.GetComponent<Rigidbody>();
 
                 Vector3 nextVec = new Vector3(transform.forward.x, cameraInHere.transform.forward.y, transform.forward.z);
@@ -53,5 +64,19 @@ public class GrenadeCreate : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         instant = false;
+    }
+
+    public void Spinning()
+    {
+        if (grenadecount >= Maxgrenade)
+            return;
+
+        grenadecount++;
+        int i = Random.Range(0, point.Length);
+        GameObject Grenade_g = Instantiate(grenade).gameObject;
+        Grenade_g.transform.position = point[i].position;
+        Grenade_g.GetComponent<Grenade>().isboom = false;
+        Grenade_g.GetComponent<Grenade>().Create = this;
+        Grenade_g.GetComponent<Grenade>().player = player.gameObject.transform;
     }
 }

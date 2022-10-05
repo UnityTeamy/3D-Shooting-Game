@@ -534,6 +534,12 @@ MonoBehaviour:
   rigid: {fileID: 520736764122010028}
   body: {fileID: 1652831021731162367}
   sound: {fileID: 1873823777200796274}
+  isboom: 1
+  spinspeed: 300
+  Create: {fileID: 0}
+  gone: 0
+  player: {fileID: 0}
+  length: 10
 --- !u!82 &1873823777200796274
 AudioSource:
   m_ObjectHideFlags: 0
