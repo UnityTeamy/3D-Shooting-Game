@@ -647,6 +647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RocketExplosion
       objectReference: {fileID: 0}
+    - target: {fileID: 1764654978243476, guid: f3b6cbd9f359dcf429dad32b4be1447b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4263658433411274, guid: f3b6cbd9f359dcf429dad32b4be1447b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -690,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 4263658433411274, guid: f3b6cbd9f359dcf429dad32b4be1447b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 169261439359229380, guid: f3b6cbd9f359dcf429dad32b4be1447b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 169261439359229380, guid: f3b6cbd9f359dcf429dad32b4be1447b, type: 3}
       propertyPath: m_PlayOnAwake

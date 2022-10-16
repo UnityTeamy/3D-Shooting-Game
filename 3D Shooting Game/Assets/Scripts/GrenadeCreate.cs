@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class GrenadeCreate : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class GrenadeCreate : MonoBehaviour
 
     //½ò ¼ö ÀÖ´Â ¼ö·ùÅº °³¼ö
     public int count = 10;
+
+    //grenade count
+    public TextMeshProUGUI grenadecounting;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +36,7 @@ public class GrenadeCreate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        grenadecounting.text = "X " + count.ToString();
     }
 
     private void FixedUpdate()

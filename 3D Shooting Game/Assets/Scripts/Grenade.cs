@@ -17,6 +17,10 @@ public class Grenade : MonoBehaviour
     public Transform player;
     public float length;
 
+    //grenade count
+    //public TextMeshProUGUI grenadecount;
+    //public GrenadeCreate grenadecreate;
+
     void Start()
     {
         if(isboom) Invoke("Explode", 2);
