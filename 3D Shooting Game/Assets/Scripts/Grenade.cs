@@ -9,6 +9,7 @@ public class Grenade : MonoBehaviour
     public Rigidbody rigid;
     public GameObject body;
     public AudioSource sound;
+    public AudioSource sound2_get;
 
     public bool isboom = true;
     public float spinspeed = 3.0f;
@@ -67,10 +68,11 @@ public class Grenade : MonoBehaviour
     {
         if (other.tag == "Player" && isboom == false && gone == false)
         {
+            sound2_get.Play();
             Create.grenadecount--;
             Create.count++;
             gone = true;
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
         }
     }
 }
