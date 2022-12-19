@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         player = gameObject.GetComponent<Player>();
+        InvokeRepeating("Healing", 1f, 1f);
     }
 
     // Update is called once per frame
@@ -62,5 +63,13 @@ public class PlayerHealth : MonoBehaviour
             //Destroy(gameObject, 2);
         }
         bDamage = true;
+    }
+
+    void Healing()
+    {
+        if(player.isDead || Player_health >= 100)
+            return;
+
+        Player_health++;
     }
 }
