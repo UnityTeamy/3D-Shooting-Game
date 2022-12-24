@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            Damage(10);
+            Damage(20);
             Destroy(other.gameObject);
         }
     }
@@ -45,7 +45,6 @@ public class Enemy : MonoBehaviour
     {
         Enemy_health -= damagesize;
         imgBar.fillAmount = (float) Enemy_health / (float) fullhealth;
-        Debug.Log(Enemy_health / fullhealth);
         //imgBar.transform.localScale = new Vector3(Enemy_health / 100.0f, 1, 1);
         //imgBar.transform.position = new Vector3(0.5f, 0, - imgBar.transform.position.x * Enemy_health / 100.0f);
 
@@ -67,6 +66,7 @@ public class Enemy : MonoBehaviour
     public void HitByGrenade(Vector3 explosionPos)
     {
         Damage(fullhealth/2);
+        Debug.Log(Enemy_health);
         Vector3 reactVec = transform.position - explosionPos;
         StartCoroutine(OnDamage(reactVec));
     }

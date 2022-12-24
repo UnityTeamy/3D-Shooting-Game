@@ -13,15 +13,15 @@ public class GrenadeCreate : MonoBehaviour
 
     public Transform[] point;
     public int Maxgrenade = 3;
-    
-    //생성되어 있는 수류탄 개수
+
+    //??????? ??? ????? ????
     public int grenadecount = 0;
 
     public Player player;
     public float retime;
 
     //쏠 수 있는 수류탄 개수
-    public int count = 10;
+    public int count = 0;
 
     //grenade count
     public TextMeshProUGUI grenadecounting;
@@ -43,21 +43,20 @@ public class GrenadeCreate : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && count > 0 && instant == false)
         {
-            Debug.Log("hi");
             instant = true;
-        //     Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit rayHit;
-        //     if (Physics.Raycast(ray, out rayHit, 100))
-        //     {
-        //         Vector3 nextVec = rayHit.point - grenadePosition.transform.position;
+            //     Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
+            //     RaycastHit rayHit;
+            //     if (Physics.Raycast(ray, out rayHit, 100))
+            //     {
+            //         Vector3 nextVec = rayHit.point - grenadePosition.transform.position;
 
-                GameObject instantGrenade = Instantiate(grenade, grenadePosition.transform.position, transform.rotation);
-                instantGrenade.GetComponent<Grenade>().isboom = true;
-                Rigidbody rigid = instantGrenade.GetComponent<Rigidbody>();
+            GameObject instantGrenade = Instantiate(grenade, grenadePosition.transform.position, transform.rotation);
+            instantGrenade.GetComponent<Grenade>().isboom = true;
+            Rigidbody rigid = instantGrenade.GetComponent<Rigidbody>();
 
-                Vector3 nextVec = new Vector3(transform.forward.x, cameraInHere.transform.forward.y, transform.forward.z);
+            Vector3 nextVec = new Vector3(transform.forward.x, cameraInHere.transform.forward.y, transform.forward.z);
 
-                rigid.AddForce(nextVec * 20, ForceMode.Impulse);
+            rigid.AddForce(nextVec * 20, ForceMode.Impulse);
             // rigid.AddTorque(Vector3.back * 10, ForceMode.Impulse);
             // }
             // instantGrenade.GetComponent<Grenade>().

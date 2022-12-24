@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 186716859215967937}
   - component: {fileID: 186716859215967951}
   - component: {fileID: 186716859215967936}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 186716859413227392}
   - component: {fileID: 186716859413227393}
   - component: {fileID: 186716859413227394}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: under
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 186716859484291734}
   - component: {fileID: 186716859484291735}
   - component: {fileID: 186716859484291688}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 186716860041106197}
   - component: {fileID: 186716860041106198}
   - component: {fileID: 186716860041106199}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186716860383747943}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 186716860514471311}
   - component: {fileID: 186716860514471296}
   - component: {fileID: 186716860514471297}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186716861157182605}
   - component: {fileID: 186716861157182604}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8843593654955520299}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

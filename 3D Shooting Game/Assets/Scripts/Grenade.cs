@@ -11,12 +11,13 @@ public class Grenade : MonoBehaviour
     public AudioSource sound;
     public AudioSource sound2_get;
 
-    public bool isboom = true;
+    public bool isboom = true; // 이게 아이템인지 실제 수류탄인지 확인
     public float spinspeed = 3.0f;
     public GrenadeCreate Create;
     public bool gone;
     public Transform player;
     public float length;
+    int i;
 
     //grenade count
     //public TextMeshProUGUI grenadecount;
@@ -54,6 +55,7 @@ public class Grenade : MonoBehaviour
         RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, length, Vector3.up, 0f, LayerMask.GetMask("Enemy"));
         foreach(RaycastHit hitObj in rayHits)
         {
+            Debug.Log(hitObj.transform.position);
             hitObj.transform.GetComponent<Enemy>().HitByGrenade(transform.position);
         }    
         Destroy(gameObject, 3);
