@@ -20,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Player player;
 
+    public GameManager gamemanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +61,7 @@ public class PlayerHealth : MonoBehaviour
         {
             player.isDead = true;
             Debug.Log("GAME OVER");
+            gamemanager.GameOver();
             Time.timeScale = 0;
             //Destroy(gameObject, 2);
         }

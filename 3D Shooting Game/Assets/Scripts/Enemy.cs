@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-            Damage(20);
+            Damage(fullhealth/3+1);
             Destroy(other.gameObject);
         }
     }
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
     public void HitByGrenade(Vector3 explosionPos)
     {
-        Damage(fullhealth/2);
+        Damage(fullhealth);
         Debug.Log(Enemy_health);
         Vector3 reactVec = transform.position - explosionPos;
         StartCoroutine(OnDamage(reactVec));

@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public GameObject camInHere;
 
     [SerializeField]
-    float lookSensitivity;
+    public float lookSensitivity;
 
     [SerializeField]
     float cameraRotateLimit;
